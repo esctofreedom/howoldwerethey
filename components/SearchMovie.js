@@ -37,7 +37,7 @@ export const SearchMovie = () => {
       {movies && (
         <div className="absolute top-11 flex flex-col z-50 bg-denim-700 max-w-4xl overflow-clip">
           {movies.map((movie) => (
-            <Link href={`/movies/${movie.id}`}>
+            <Link href={`/movies/${movie.id}`} key={movie.id}>
               <div className="flex gap-3 p-2 hover:bg-denim-600 cursor-pointer">
                 <h4 className="truncate font-semibold text-lg">
                   {movie.title}

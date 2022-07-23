@@ -193,6 +193,7 @@ const Actor = ({ actor, credits, images }) => {
                 alt={actor.name}
                 width={250}
                 height={375}
+                key ={image.id}
               />
             );
           })}

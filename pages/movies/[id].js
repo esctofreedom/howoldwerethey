@@ -55,7 +55,6 @@ const Movie = ({ movie, similar }) => {
           setCast((prevCast) => [...prevCast, actor]);
         } else {
           //
-          
         }
       });
     });
@@ -86,7 +85,7 @@ const Movie = ({ movie, similar }) => {
       <div className="col-span-5">
         <div className="flex flex-col gap-1">
           {cast?.map((actor) => (
-            <ActorAgeComponent actor={actor} movie={movie} />
+            <ActorAgeComponent actor={actor} movie={movie} key={actor.id} />
           ))}
         </div>
       </div>

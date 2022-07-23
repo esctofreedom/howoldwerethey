@@ -66,7 +66,8 @@ export default function Home() {
           <h3 className="">Popular Movies</h3>
 
           <div className="grid grid-cols-6">
-            {movies && movies.map((movie) => <MovieCard movie={movie} />)}
+            {movies &&
+              movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
           </div>
         </div>
 
@@ -74,7 +75,8 @@ export default function Home() {
           <h3 className="">Popular Actors</h3>
 
           <div className="grid grid-cols-6">
-            {actors && actors.map((actor) => <ActorCard actor={actor} />)}
+            {actors &&
+              actors.map((actor) => <ActorCard actor={actor} key={actor.id} />)}
           </div>
         </div>
       </div>
