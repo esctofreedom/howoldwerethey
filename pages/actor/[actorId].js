@@ -1,11 +1,9 @@
 // get static paths
 
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { ActorAgeComponent } from "../../components/ActorAgeComponent";
+
 import Image from "next/image";
-import { MovieCard } from "../../components/movieCard";
-import { MovieDeeperInfo } from "../../components/MovieDeeperInfo";
+
 import dayjs from "dayjs";
 import { MovieActor } from "../../components/MovieActor";
 import { AgeComponent } from "../../components/AgeComponent";

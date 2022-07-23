@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { ActorAgeComponent } from "../../components/ActorAgeComponent";
 import Image from "next/image";
-import { MovieCard } from "../../components/movieCard";
+import { MovieCard } from "../../components/MovieCard";
 import { MovieDeeperInfo } from "../../components/MovieDeeperInfo";
 
 // use getstaticpaths and getstaticprops to get data from the API from id

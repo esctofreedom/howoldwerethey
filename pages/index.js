@@ -1,11 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Dark } from "../components/Dark";
-import { MovieCard } from "../components/movieCard";
+
+import { MovieCard } from "../components/MovieCard";
 import { SearchMovie } from "../components/SearchMovie";
-import { ActorAgeComponent } from "../components/ActorAgeComponent";
+
 import { ActorCard } from "../components/ActorCard";
 
 export default function Home() {
