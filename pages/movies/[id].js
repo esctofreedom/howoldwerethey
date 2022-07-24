@@ -62,7 +62,11 @@ const Movie = ({ movie, similar }) => {
   };
 
   useEffect(() => {
-    getFurtherData(trimmedCast);
+    // only run if cast is empty
+
+    if (cast.length === 0) {
+      getFurtherData(trimmedCast);
+    }
   }, []);
 
   console.log("cast", cast);
@@ -72,18 +76,20 @@ const Movie = ({ movie, similar }) => {
 
   return (
     <div className="mx-auto max-w-7xl grid grid-cols-10">
-      <div className="col-span-5">
+      <div className="col-span-10 lg:col-span-5 mx-auto">
         <MovieDeeperInfo movie={movie} />
 
-        <h3 className="px-4">Similar Movies</h3>
-        <div className="grid grid-cols-5">
-          {similar?.results.slice(0, 4).map((movie) => (
-            <MovieCard key={movie.id} movie={movie} />
-          ))}
+        <div className="hidden md:block">
+          <h3 className="px-4">Similar Movies</h3>
+          <div className="grid grid-cols-5">
+            {similar?.results.slice(0, 4).map((movie) => (
+              <MovieCard key={movie.id} movie={movie} />
+            ))}
+          </div>
         </div>
       </div>
-      <div className="col-span-5">
-        <div className="flex flex-col gap-1">
+      <div className="col-span-10  lg:col-span-5 ">
+        <div className="grid grid-cols-3 lg:grid-cols-4 gap-4">
           {cast?.map((actor) => (
             <ActorAgeComponent actor={actor} movie={movie} key={actor.id} />
           ))}

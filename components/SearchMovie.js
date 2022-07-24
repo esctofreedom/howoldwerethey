@@ -19,12 +19,10 @@ export const SearchMovie = () => {
     setMovies(movies.slice(0, 12));
   };
 
-  console.log("movies", movies);
-
   return (
     <div className="relative">
       <input
-        className="py-2 px-4 w-[300px] rounded-md bg-denim-600 text-denim-100"
+        className="py-4 px-4 w-auto lg:w-[500px] rounded-md bg-slate-200 dark:bg-denim-600 text-denim-100 border-2 border-slate-300 dark:border-denim-500"
         type="text"
         placeholder="Search for a movie"
         onChange={(e) => {
@@ -35,7 +33,7 @@ export const SearchMovie = () => {
       />
 
       {movies && (
-        <div className="absolute top-11 flex flex-col z-50 bg-denim-700 max-w-4xl overflow-clip">
+        <div className="absolute top-11 flex flex-col z-50 bg-slate-200 dark:bg-denim-700 max-w-[500px] overflow-clip">
           {movies.map((movie) => (
             <Link href={`/movies/${movie.id}`} key={movie.id}>
               <div className="flex gap-3 p-2 hover:bg-denim-600 cursor-pointer">

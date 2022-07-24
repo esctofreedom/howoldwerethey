@@ -1,3 +1,4 @@
+import { StarIcon } from "@heroicons/react/solid";
 import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +39,10 @@ export const MovieCard = ({ movie }) => {
             <label>{dayjs(movie.release_date).format("YYYY")}</label>
             <div className="flex-grow"></div>
 
-            <label>{movie.vote_average}</label>
+            <label className="font-bold text-xs flex gap-1 items-center">
+              <StarIcon className="h-4 w-4 text-amber-500" />
+              {movie.vote_average.toFixed(1)}
+            </label>
           </div>
         </div>
       </div>

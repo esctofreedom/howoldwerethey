@@ -21,6 +21,7 @@ export const MovieActor = ({ movie, actor }) => {
 
             <AgeComponent
               birthday={actor.birthday}
+              deathDate={actor.deathday}
               movieDate={movie.release_date}
               size="small"
             />

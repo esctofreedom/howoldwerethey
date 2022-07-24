@@ -7,6 +7,7 @@ import { MovieCard } from "../components/MovieCard";
 import { SearchMovie } from "../components/SearchMovie";
 
 import { ActorCard } from "../components/ActorCard";
+import { AgeComponent } from "../components/AgeComponent";
 
 export default function Home() {
   // import api key from .env file
@@ -51,11 +52,13 @@ export default function Home() {
       </Head>
 
       <div className="mx-auto max-w-7xl p-8 rounded-md">
-        <h1 className="">How Old Were They?</h1>
-        <p className="text-slate-300">
-          Are you ever watching a movie and wonder how old an actor or actress
-          was when it was filmed?
-        </p>
+        <div className="text-center">
+          <h1 className="">How Old Were They?</h1>
+          <p className="text-slate-500 dark:text-denim-300">
+            Are you ever watching a movie and wonder how old an actor or actress
+            was when it was filmed?
+          </p>
+        </div>
 
         {/* input to search for a movie */}
         <div className="flex justify-center">
@@ -63,18 +66,18 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="">Popular Movies</h3>
+          <h3 className="text-base ">Popular Movies</h3>
 
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-4">
             {movies &&
               movies.map((movie) => <MovieCard movie={movie} key={movie.id} />)}
           </div>
         </div>
 
         <div>
-          <h3 className="">Popular Actors</h3>
+          <h3 className="text-base ">Popular Actors</h3>
 
-          <div className="grid grid-cols-6">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-4">
             {actors &&
               actors.map((actor) => <ActorCard actor={actor} key={actor.id} />)}
           </div>
