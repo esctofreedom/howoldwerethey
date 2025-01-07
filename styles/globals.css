@@ -7,69 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @layer base {
-
-  body {
-@apply dark:bg-denim-900 bg-slate-100
-  }
-
-  main {
-    @apply bg-white  md:bg-slate-50 dark:bg-denim-900;
-  }
-
-  h1 {
-    /* @apply text-xl  font-bold text-purple-600 dark:text-white; */
-    @apply text-4xl  font-extrabold text-gray-900 dark:text-white font-inter pb-0;
-  }
-
-  h2 {
-    @apply text-3xl  font-extrabold font-inter text-gray-900 dark:text-white pb-0;
-  }
-
-  h3 {
-    @apply text-2xl font-bold font-inter text-slate-800 dark:text-denim-100 pb-0 pr-2;
-  }
-
-  h4 {
-    @apply text-xl font-bold font-inter text-slate-700 dark:text-white pb-0;
-  }
-
-  h5 {
-    /* @apply text-xl font-extrabold font-inter text-gray-900 dark:text-white pb-0; */
-    @apply text-lg font-bold font-inter text-gray-400 dark:text-denim-300 pb-0;
-  }
-
-  h6 {
-    /* Used for Titles of Smaller Stuff like Cards */
-    @apply text-base font-semibold font-inter text-gray-900 dark:text-white pb-0;
-  }
-
-
-  p {
-    @apply font-semibold text-base text-slate-500 dark:text-denim-300 mb-4;
-  }
-
-  
-
-  span {
-    @apply text-gray-700 dark:text-white;
-  }
-
-  a {
-    @apply text-purple-500 dark:text-denim-100 border-b-2 border-transparent  transition ease-in-out hover:border-purple-500 dark:hover:text-purple-400;
-  }
-
-  hr {
-    @apply text-gray-200 dark:text-denim-600  my-4;
-  }
-
-  label {
-    @apply font-medium text-base text-left md:text-sm text-gray-400 dark:text-denim-400  block;
-  }
-
-
-
-
-
   /* dark:text-dc-text */
   :root {
     --background: 0 0% 100%;
@@ -78,9 +15,9 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 330.4 81.2% 60.4%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
+    --secondary: 198.6 88.7% 48.4%;
     --secondary-foreground: 240 5.9% 10%;
     --muted: 240 4.8% 95.9%;
     --muted-foreground: 240 3.8% 46.1%;
@@ -105,9 +42,9 @@
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 328.6 85.5% 70.2%;
     --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
+    --secondary: 198.4 93.2% 59.6%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
@@ -124,6 +61,34 @@
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+    @apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
+  }
+
+  h3 {
+    @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  h5 {
+    @apply scroll-m-20 text-lg font-semibold tracking-tight;
+  }
+
+  h6 {
+    @apply scroll-m-20 text-base font-semibold tracking-tight;
+  }
+
+  /* a {
+    @apply text-primary hover:text-primary/80 transition-colors;
+  } */
 }
 
 @layer components {
@@ -149,10 +114,8 @@
     @apply fixed overflow-hidden bg-slate-900/20 backdrop-blur-sm  inset-0 transform z-20 ease-in-out flex items-center justify-center 
     lg:ml-[240px] lg:mt-[55px]
     md:ml-[80px] md:mt-[50px]
-    mb-[74px] md:mb-0
+    mb-[74px] md:mb-0;
   }
-
-  
 
   /* Buttons */
   .button {
@@ -178,8 +141,6 @@
     @apply bg-gradient-to-r from-pink-600  to-purple-700 
     text-white text-sm font-semibold uppercase hover:from-pink-500 hover:to-purple-600;
   }
-
-
 }
 
 @layer utilities {
@@ -204,12 +165,8 @@
       1px 2px 4px rgb(54 64 147 / 18%);
   }
 
-
-
   /* My custom Dark Theme Styles */
 
-  
-  
   /* .rbt {
     @apply w-full h-full;
   } */

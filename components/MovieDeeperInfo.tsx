@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import Link from "next/link";
 import { StarIcon } from "@heroicons/react/solid";
+import Imagio from "./Imagio";
 const example = {
   adult: false,
   backdrop_path: "/393mh1AJ0GYWVD7Hsq5KkFaTAoT.jpg",
@@ -28,48 +29,47 @@ export const MovieDeeperInfo = ({ movie }) => {
   console.log("posterUrl", backdropUrl);
 
   return (
-    <Link href={`/movies/${movie.id}`}>
-      <div className="card flex flex-col relative  overflow-hidden  lg:h-auto">
-        <div
+    <div className=" flex flex-row md:flex-col relative  overflow-hidden  md:h-auto gap-4">
+      {/* <div
           className="md:absolute 
         block h-full w-full bg-gradient-to-b from-black/80 to-transparent z-10 p-4"
         >
           <div className="flex-grow"></div>
-
-          <div className="flex flex-col flex-shrink w-full p-2 text-clip ">
-            <div className="flex-grow"></div>
-            <h6 className="font-semibold text-3xl  truncate text-slate-100">
-              {movie.title}
-            </h6>
-
-            <div className="flex w-full flex-row gap-2">
-              <span className="font-bold text-lg text-slate-300 dark:text-denim-200">
-                {dayjs(movie.release_date).format("YYYY")}
-              </span>
-
-              <div className="flex-grow"></div>
-
-              <span className="font-bold text-lg flex gap-2 items-center text-white">
-                <StarIcon className="h-6 w-6 text-amber-500" />
-                {movie.vote_average.toFixed(1)}
-              </span>
-            </div>
-
-            <span className="text-slate-300 dark:text-denim-100 font-normal">
-              {movie.overview}
-            </span>
-          </div>
-        </div>
-        <div className="w-full md:block hidden">
-          <Image
-            src={posterUrl}
+        </div> */}
+      <div className="w-full flex justify-center">
+        <div className="w-full h-full bg-muted rounded-lg object-cover  ">
+          <Imagio
+            url={posterUrl}
             alt={movie.title}
-            height={750}
-            width={500}
-            layout="responsive"
+            height={800}
+            width={800}
+            className="rounded-lg object-cover"
+            isMovie={true}
           />
         </div>
       </div>
-    </Link>
+      <div className="flex flex-col flex-shrink w-full  text-clip bg-background items-start justify-start ">
+        <h6 className="font-medium text-2xl  truncate text-secondary-foreground">
+          {movie.title}
+        </h6>
+
+        <div className="flex w-full flex-row gap-2">
+          <span className="font-normal text-base text-muted-foreground">
+            {dayjs(movie.release_date).format("YYYY")}
+          </span>
+
+          <div className="flex-grow"></div>
+
+          <span className="font-bold text-base flex gap-2 items-center text-foreground font-mono">
+            <StarIcon className="h-5 w-5 text-amber-500" />
+            {movie.vote_average.toFixed(1)}
+          </span>
+        </div>
+
+        <span className="text-muted-foreground font-light text-sm text-balance w-full">
+          {movie.overview}
+        </span>
+      </div>
+    </div>
   );
 };
