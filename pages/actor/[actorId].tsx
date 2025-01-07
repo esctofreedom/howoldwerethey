@@ -321,16 +321,12 @@ export default function ActorPage({ actor }: ActorProps) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  // Fetch all actor IDs
-  const paths = [];
-
+export async function getStaticPaths() {
   return {
-    paths,
-    fallback: false, // or 'blocking' if you want to generate new pages on demand
+    paths: [],
+    fallback: true,
   };
-};
-
+}
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   try {
     const res = await fetch(
