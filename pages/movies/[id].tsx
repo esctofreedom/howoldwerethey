@@ -109,7 +109,7 @@ export async function getStaticProps({ params }) {
         },
         cast: castDetails,
       },
-      revalidate: 3600, // Revalidate every hour
+      revalidate: 86400, // Revalidate every day
     };
   } catch (error) {
     console.error("Error fetching movie data:", error);

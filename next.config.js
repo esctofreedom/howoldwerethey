@@ -14,10 +14,10 @@ const nextConfig = {
           },
         }
       : undefined,
-  // env: {
-  //   NEXT_PUBLIC_NEXT_PUBLIC_API_URL:
-  //     process.env.NEXT_PUBLIC_NEXT_PUBLIC_API_URL,
-  // },
+  env: {
+    TMDB_API_KEY: process.env.TMDB_API_KEY,
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
+  },
 };
 
 module.exports = nextConfig;
