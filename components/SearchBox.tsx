@@ -20,7 +20,6 @@ import dayjs from "dayjs";
 import Link from "next/link";
 import Imagio from "./Imagio";
 import { Skeleton } from "@/components/ui/skeleton";
-import { CommandShortcut } from "@/components/ui/command";
 import { Toggle } from "@/components/ui/toggle";
 
 interface SearchBoxProps {
@@ -447,9 +446,9 @@ export default function SearchBox({
             className="text-sm p-2 pl-9 pr-20 bg-muted w-full  sm:w-[361px]"
             readOnly
           />
-          <CommandShortcut className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+          <div className=" text-xs text-muted-foreground pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
             ⌘K
-          </CommandShortcut>
+          </div>
         </div>
       </DialogTrigger>
       <DialogContent className="flex flex-col p-0 min-h-[400px] shadow-pink-500/30 shadow-2xl">
