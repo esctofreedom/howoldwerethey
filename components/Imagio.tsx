@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { cn } from "@/lib/utils";
 import { Clapperboard } from "lucide-react";
 import { UserRoundIcon } from "lucide-react";
@@ -40,7 +41,7 @@ const Imagio = ({
 
   return (
     <div className="overflow-hidden rounded-lg">
-      <Image
+      <img
         src={fullUrl}
         alt={alt}
         height={height}

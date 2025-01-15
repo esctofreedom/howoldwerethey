@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import {
   Tooltip,
   TooltipContent,
@@ -33,7 +34,7 @@ const ActorCardKnownFor = ({ actor }: { actor: any }) => {
                     movie.release_date
                   ).format("YYYY")})`}
                 >
-                  <Image
+                  <img
                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                     alt={movie.title}
                     height={48}
@@ -44,11 +45,11 @@ const ActorCardKnownFor = ({ actor }: { actor: any }) => {
               </TooltipTrigger>
               <TooltipContent className="bg-background w-[400px] grid grid-cols-5 cursor-pointer">
                 <div className="col-span-2 relative aspect-[2/3] rounded-md overflow-hidden">
-                  <Image
+                  <img
                     src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                     alt={movie.title || movie.name}
-                    fill
-                    className="object-cover rounded-lg"
+                    // fill
+                    className="object-cover rounded-lg "
                   />
                 </div>
                 <div className="col-span-3 p-3 flex flex-col gap-2">

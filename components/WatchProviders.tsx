@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
@@ -147,10 +148,10 @@ const ProviderLogo = ({ provider }: { provider: Provider }) => {
         className="relative w-12 h-12 rounded-lg overflow-hidden hover:scale-110 transition-all duration-100"
         title={provider.provider_name}
       >
-        <Image
+        <img
           src={`https://image.tmdb.org/t/p/original${provider.logo_path}`}
           alt={provider.provider_name}
-          fill
+          // fill
           className="object-cover"
         />
       </div>

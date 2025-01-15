@@ -31,16 +31,6 @@ export const ActorCard = ({
     <Link href={`/actor/${actor.id}`}>
       <div className="group relative  flex flex-col animate transition-all cursor-pointer">
         <div className="overflow-hidden rounded-lg relative ">
-          {/* <Image
-              src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
-              alt={actor.title}
-              height={750}
-              width={500}
-              className={`group-hover:scale-[105%]  group-hover:opacity-100 overflow-hidden transition-all ease-in-out duration-200 rounded-md ${
-                isDead ? "grayscale contrast-150 opacity-30" : "opacity-95"
-              }`}
-            /> */}
-
           <Imagio
             url={actor.profile_path}
             alt={actor.title}
